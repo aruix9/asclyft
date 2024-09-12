@@ -1,0 +1,76 @@
+/* bootstrap override */
+:root {
+  /* colors */
+  --bs-body-color: #1B3A4B;
+  --bs-primary-rgb: 239, 48, 14;
+  --bs-black-rgb: 24, 28, 30;
+  --bs-link-color-rgb: var(--bs-primary-rgb);
+  --bs-emphasis-color-rgb: var(--bs-primary-rgb);
+  
+
+  --bs-font-sans-serif: "Raleway", sans-serif;
+  --logo-font: "Archivo Black", sans-serif;
+  --bs-breadcrumb-font-size: 12px;
+}
+.navbar {
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-nav-link-padding-x: 1rem;
+}
+.navbar-nav {
+  --bs-nav-link-padding-y: .7rem;
+  --bs-nav-link-color: var(--bs-light);
+}
+.nav-link {
+  --bs-nav-link-font-size: .9rem;
+  --bs-nav-link-font-weight: 500;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  font-weight: 800;
+}
+
+/* defaults */
+a {
+  text-decoration: none;
+}
+
+.dropdown-toggle::after {
+  width: 8px;
+  height: 8px;
+  border: solid;
+  margin-left: 6px;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
+/* logo */
+.brand {
+  color: #eaf8ff;
+  font-size: 1.8rem;
+  font-family: var(--logo-font);
+}
+
+/* clientele */
+.clientele img {
+  filter: grayscale(100%);
+  mix-blend-mode: multiply;
+}
+
+.mission-vision {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("./../images/banner/mission-vission.jpg");
+}
+.mission-vision::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .8;
+  content: "";
+  position: absolute;
+  background-color: #000;
+}
